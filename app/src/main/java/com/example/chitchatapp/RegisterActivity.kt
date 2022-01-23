@@ -2,13 +2,11 @@ package com.example.chitchatapp
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
-import android.view.View
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
@@ -17,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_register.*
 import java.util.*
 
 class RegisterActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -36,12 +35,12 @@ class RegisterActivity : AppCompatActivity() {
             intent.type = "image/*"
             startActivityForResult(intent, 0)
         }
-
     }
 
     //This will hold uri of photo we chose
     var selectedPhotoUri: Uri? = null
 
+    //When we choose image after that onActivityResult is executed
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -108,6 +107,7 @@ class RegisterActivity : AppCompatActivity() {
             }
     }
 
+    //Function to save User Data in Firebase Realtime Database
     private fun saveUserToFirebaseDatabase(profileImageUrl: String) {
         // uid which Firebase auth gives to every user
         val uid = FirebaseAuth.getInstance().uid ?: ""

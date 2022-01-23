@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "276149301433",
+    "project_id": "chatty-chat-app-a310b",
+    "storage_bucket": "chatty-chat-app-a310b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:276149301433:android:41904acc5f20bd5bbe6b68",
+        "android_client_info": {
+          "package_name": "com.example.chitchatapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "276149301433-a3d3jbesbg7ven5v0s0fttnffp35t9a5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdWugvw8FeRoZ45u1OsXYiayJ7aCKUm8Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "276149301433-a3d3jbesbg7ven5v0s0fttnffp35t9a5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -118,6 +118,10 @@ class RegisterActivity : AppCompatActivity() {
         ref.setValue(user)
             .addOnSuccessListener {
                 Log.d("#DDDDD Database: ", "Finally we saved user to database")
+                val intent = Intent(this, LatestMessagesActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
+
             }.addOnFailureListener{
                 Log.d("#DDDDDD Database: ", "User could register to Database ${it.message}")
             }

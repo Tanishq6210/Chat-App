@@ -15,8 +15,13 @@ class LoginActivity : AppCompatActivity() {
         btn_login.setOnClickListener {
             loginUser()
         }
+
+        tv_forgot_password.setOnClickListener {
+            resetPassword()
+        }
     }
 
+    //Function to login user using Firebase Authentication
     private fun loginUser() {
         val email = et_login_email.text.toString()
         val password = et_login_password.text.toString()
@@ -32,6 +37,7 @@ class LoginActivity : AppCompatActivity() {
             .addOnCompleteListener(this) {
                 if(it.isSuccessful) {
                     Log.d("#DDDDDDD", "${it.result.user?.uid}")
+                    Toast.makeText(this, "Logged in Successfully", Toast.LENGTH_SHORT).show()
                 } else {
                     Log.d("#DDDDDDD", "Couldn't Logged in Successfully")
                 }
@@ -39,5 +45,25 @@ class LoginActivity : AppCompatActivity() {
             .addOnFailureListener(this) {
                 Toast.makeText(this, "Failed to log in ${it.message}", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    //Function to reset password using Firebase Authentication template
+    private fun resetPassword() {
+        val email = et_login_email.text.toString()
+
+        if(email.isEmpty()) {
+            if(email.isEmpty()) {
+                Toast.makeText(this, "Please Enter valid Email", Toast.LENGTH_SHORT).show()
+                return
+            }
+        }
+
+        FirebaseAuth.getInstance().sendPasswordResetEmail(email)
+            .addOnCompleteListener(this) {
+                Toast.makeText(this, "Reset Password Email sent successfully", Toast.LENGTH_SHORT).show()
+            }.addOnFailureListener(this) {
+                Toast.makeText(this, "Reset Password not sent, ${it.message}", Toast.LENGTH_SHORT).show()
+            }
+
     }
 }

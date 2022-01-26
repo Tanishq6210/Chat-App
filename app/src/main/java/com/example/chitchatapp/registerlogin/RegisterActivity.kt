@@ -8,6 +8,8 @@ import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
+import com.example.chitchatapp.messages.LatestMessagesActivity
+import com.example.chitchatapp.registerlogin.LoginActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage

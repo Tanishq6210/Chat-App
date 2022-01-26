@@ -1,10 +1,13 @@
-package com.example.chitchatapp
+package com.example.chitchatapp.messages
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import com.example.chitchatapp.NewMessagesActivity
+import com.example.chitchatapp.R
+import com.example.chitchatapp.RegisterActivity
 import com.google.firebase.auth.FirebaseAuth
 
 class LatestMessagesActivity : AppCompatActivity() {

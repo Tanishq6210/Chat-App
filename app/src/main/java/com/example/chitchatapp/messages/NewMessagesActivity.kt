@@ -1,8 +1,11 @@
 package com.example.chitchatapp
 
+import android.app.Activity
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.chitchatapp.messages.ChatLogActivity
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -43,6 +46,12 @@ class NewMessagesActivity : AppCompatActivity() {
                         adapter.add(UserItem(user))
                     }
                 }
+                
+                adapter.setOnItemClickListener { item, view ->
+                    val intent = Intent(view.context, ChatLogActivity::class.java)
+                    startActivity(intent)
+                    finish()
+                }
 
                 rv_new_messages.adapter = adapter
             }
@@ -55,7 +64,7 @@ class NewMessagesActivity : AppCompatActivity() {
     }
 }
 
-class UserItem(val user: User): Item<ViewHolder>() {
+class UserItem(private val user: User): Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
         // will be called in out list for each user object later on....
         viewHolder.itemView.apply {

@@ -1,10 +1,12 @@
-package com.example.chitchatapp
+package com.example.chitchatapp.registerlogin
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.chitchatapp.R
+import com.example.chitchatapp.messages.LatestMessagesActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 

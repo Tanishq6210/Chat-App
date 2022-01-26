@@ -9,9 +9,15 @@
         android:roundIcon="@drawable/chatty_icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.ChitChatApp">
-
         <activity
-            android:name=".LatestMessagesActivity"
+            android:name=".messages.ChatLogActivity"
+            android:exported="false" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".messages.LatestMessagesActivity" />
+        </activity>
+        <activity
+            android:name=".messages.LatestMessagesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,22 +25,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".RegisterActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true"></activity>
         <activity
-            android:name=".LoginActivity"
+            android:name=".registerlogin.LoginActivity"
             android:exported="false" />
-
         <activity
             android:name=".NewMessagesActivity"
-            android:exported="false" >
-            <!-- To Add Back Button in the Menu Option   -->
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".LatestMessagesActivity"/>
+            android:exported="false">
+
+            <!-- To Add Back Button in the Menu Option -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".messages.LatestMessagesActivity" />
         </activity>
     </application>
 

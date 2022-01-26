@@ -4,42 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_color"
     tools:context=".messages.ChatLogActivity">
 
     <EditText
         android:id="@+id/et_enter_message"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="10dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/register_et_bg"
         android:ems="10"
         android:hint="Enter Message ..."
         android:inputType="textPersonName"
+        android:paddingStart="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/bt_send_chat"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <ImageButton
         android:id="@+id/bt_send_chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:background="@drawable/register_et_bg"
-        android:backgroundTint="@color/bg_color"
+        android:background="@drawable/btn_send_bg"
+        android:src="@drawable/ic_baseline_send_24"
         android:text="send"
         app:layout_constraintBottom_toBottomOf="@+id/et_enter_message"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_enter_message" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_chat_log"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/et_enter_message"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/chat_from_row" />
 </androidx.constraintlayout.widget.ConstraintLayout>

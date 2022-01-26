@@ -1,11 +1,11 @@
 package com.example.chitchatapp
 
-import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import com.example.chitchatapp.messages.ChatLogActivity
+import com.example.chitchatapp.models.User
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -15,10 +15,13 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.activity_new_messages.*
-import kotlinx.android.synthetic.main.activity_register.view.*
 import kotlinx.android.synthetic.main.user_row_new_message.view.*
 
 class NewMessagesActivity : AppCompatActivity() {
+
+    companion object {
+        val USER_KEY = "USER_KEY"
+    }
     final val tag = "#DDDDDDDDD"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,7 +51,10 @@ class NewMessagesActivity : AppCompatActivity() {
                 }
                 
                 adapter.setOnItemClickListener { item, view ->
+                    val userItem = item as UserItem
                     val intent = Intent(view.context, ChatLogActivity::class.java)
+                    //intent.putExtra(USER_KEY, userItem.user.userName)
+                    intent.putExtra(USER_KEY, userItem.user)
                     startActivity(intent)
                     finish()
                 }
@@ -64,7 +70,7 @@ class NewMessagesActivity : AppCompatActivity() {
     }
 }
 
-class UserItem(private val user: User): Item<ViewHolder>() {
+class UserItem(val user: User): Item<ViewHolder>() {
     override fun bind(viewHolder: ViewHolder, position: Int) {
         // will be called in out list for each user object later on....
         viewHolder.itemView.apply {

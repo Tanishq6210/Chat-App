@@ -4,16 +4,21 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Github/Chat-App/app/src/main/res/drawable/btn_bg_image.xml" value="0.14444444444444443" />
+        <entry key="..\:/Github/Chat-App/app/src/main/res/drawable/btn_send_bg.xml" value="0.1259259259259259" />
+        <entry key="..\:/Github/Chat-App/app/src/main/res/drawable/chat_to_bg.xml" value="0.2703125" />
+        <entry key="..\:/Github/Chat-App/app/src/main/res/drawable/chat_tv_bg.xml" value="0.2703125" />
+        <entry key="..\:/Github/Chat-App/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.24444444444444444" />
         <entry key="..\:/Github/Chat-App/app/src/main/res/drawable/register_et_bg.xml" value="0.10740740740740741" />
-        <entry key="..\:/Github/Chat-App/app/src/main/res/layout/activity_chat_log.xml" value="0.2" />
+        <entry key="..\:/Github/Chat-App/app/src/main/res/layout/activity_chat_log.xml" value="0.264" />
         <entry key="..\:/Github/Chat-App/app/src/main/res/layout/activity_latest_messages.xml" value="0.264" />
         <entry key="..\:/Github/Chat-App/app/src/main/res/layout/activity_login.xml" value="0.264" />
         <entry key="..\:/Github/Chat-App/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Github/Chat-App/app/src/main/res/layout/activity_new_messages.xml" value="0.264" />
         <entry key="..\:/Github/Chat-App/app/src/main/res/layout/activity_register.xml" value="0.264" />
-        <entry key="..\:/Github/Chat-App/app/src/main/res/layout/chat_from_row.xml" value="0.144" />
+        <entry key="..\:/Github/Chat-App/app/src/main/res/layout/chat_from_row.xml" value="0.325068870523416" />
+        <entry key="..\:/Github/Chat-App/app/src/main/res/layout/chat_to_row.xml" value="0.2" />
         <entry key="..\:/Github/Chat-App/app/src/main/res/layout/user_row_new_message.xml" value="0.264" />
-        <entry key="..\:/Github/Chat-App/app/src/main/res/menu/nav_menu.xml" value="0.2578125" />
+        <entry key="..\:/Github/Chat-App/app/src/main/res/menu/nav_menu.xml" value="0.4" />
       </map>
     </option>
   </component>

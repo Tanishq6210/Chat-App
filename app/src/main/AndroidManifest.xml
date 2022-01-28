@@ -27,7 +27,7 @@
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".registerlogin.LoginActivity"
             android:exported="false" />

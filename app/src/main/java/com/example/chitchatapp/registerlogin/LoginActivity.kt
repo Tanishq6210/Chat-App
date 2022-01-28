@@ -35,7 +35,7 @@ class LoginActivity : AppCompatActivity() {
             return
         }
 
-        //Login with Firebase
+        //Login with Firebase using Firebase Auth
         // Site --> https://firebase.google.com/docs/auth/android/start#kotlin+ktx_1
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) {
